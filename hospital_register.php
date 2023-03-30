@@ -13,7 +13,7 @@ else{
     $sql = "insert into hospital_data ( name, contact, email, address, pass) values ( '$name', '$contact', '$email', '$address', '$pass')";
     if($conn->query($sql)==TRUE){
         echo "<script>alert('Registered Successfully!');</script>";
-        echo "<script>location.replace('index.html');</script>";
+        echo "<script>location.replace('login.html');</script>";
     }
     else {
         echo "Error: " . $conn->error;

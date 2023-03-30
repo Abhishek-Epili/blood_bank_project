@@ -20,7 +20,7 @@ if ($conn->connect_error) {
       }
     } else {
       echo "<script>alert('Invalid Login Details!');</script>";
-      echo "<script>location.href = 'index.html';</script>";
+      echo "<script>location.href = 'login.html';</script>";
     }
   } else if ($login_type == "Hospital") {
     $sql = "select * from hospital_data where email='$email' and pass='$pass'";
@@ -33,7 +33,7 @@ if ($conn->connect_error) {
       echo "<script>location.href = 'hospital_control.html';</script>";
     } else {
       echo "<script>alert('Invalid Login Details!');</script>";
-      echo "<script>location.href = 'index.html';</script>";
+      echo "<script>location.href = 'login.html';</script>";
     }
   }
   $conn->close();

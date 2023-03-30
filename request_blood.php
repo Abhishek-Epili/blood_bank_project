@@ -28,11 +28,11 @@
             }
         } else {
             echo "<script>alert('You are not logged in!');</script>";
-            echo "<script>location.href = 'index.html';</script>";
+            echo "<script>location.href = 'login.html';</script>";
         }
     } catch (Exception $e) {
         echo "<script>alert('You are not logged in!');</script>";
-        echo "<script>location.href = 'index.html';</script>";
+        echo "<script>location.href = 'login.html';</script>";
     }
     ?>
     <form action="add_request.php?id=<?php echo $id ?>" method="post">
