@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1>User Registration Page</h1>
+        <form action="receiver_register.php" method="post">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" required></td>
+                </tr>
+                <tr>
+                    <td>Blood Group</td>
+                    <td><select name="bldgrp" required>
+                        <option>A positive</option>
+                        <option>A negative</option>
+                        <option>B positive </option>
+                        <option>B negative</option>
+                        <option>O positive</option>
+                        <option>O negative</option>
+                        <option>AB positive</option>
+                        <option>AB negative</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Contact</td>
+                    <td><input type="tel" name="contact" pattern="[0-9]{10}" required title="Contact number should be contain exact 10 digits"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Create Password</td>
+                    <td><input type="password" name="pass1" required></td>
+                </tr>
+                <tr>
+                    <td>Re-enter Password</td>
+                    <td><input type="password" name="pass2" required></td>
+                </tr>
+                <tr>
+                     <td></td>
+                     <td><input type="submit" value="Create Account" ></td>
+                </tr>
+                <tr>
+                    <td><a href="hospital_register.html">Not a Receiver? Register as Hospital</a></td>
+                </tr>
+                <tr>
+                    <td><a href="index.html">Go to Login Page</a></td>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>

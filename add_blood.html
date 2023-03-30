@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="add_blood.php" method="post">
+        <h1>Fill the above details</h1><br/>
+        <table>
+            <tr>
+                <td>Enter Blood Group</td>
+                <td><select name="bldgrp" required>
+                    <option>A positive</option>
+                    <option>A negative</option>
+                    <option>B positive </option>
+                    <option>B negative</option>
+                    <option>O positive</option>
+                    <option>O negative</option>
+                    <option>AB positive</option>
+                    <option>AB negative</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Enter Quantity of Blood(in ml)</td>
+                <td><input type="number" name="quantity" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
