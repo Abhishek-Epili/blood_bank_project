@@ -93,11 +93,15 @@ if ($conn->connect_error) {
     <h1 style="width: 600px; text-align: center">Details of blood samples available in particular hospitals are as follows</h1><br><br>
     <?php
     echo $table;
+    echo "</div";
+    if($_GET["user"] == "view"){
+    echo "</div>
+    <form action='logout.php' >
+        <button class='logout'>Logout</button>
+    </form>";
+    }
     ?>
-    </div>
-    <form action="logout.php" >
-        <button class="logout">Logout</button>
-    </form>
+    
 
 </body>
 </html>
