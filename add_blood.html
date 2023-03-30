@@ -1,38 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .logout {
+            position: absolute;
+            top: 100px;
+            right: 40px;
+            width: 120px;
+            height: 60px;
+            font-size: 17px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 25px;
+        }
+
+        .logout:hover {
+            background-color: darkblue;
+            color: white;
+        }
+
+        .container {
+            margin: 20px 28%;
+            border: 1px solid black;
+            color: black;
+            height: 480px;
+            width: 600px;
+            border-radius: 20px;
+            font-family: 'Verdana';
+        }
+
+        .content {
+            position: relative;
+            left: 50px;
+        }
+        select{
+            width: 180px;
+            height: 30px;
+            font-size: 15px;
+        }
+        td{
+            padding: 20px 10px;
+        }
+        .add{
+            width: 100px;
+            height: 50px;
+            font-size: 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: lightgreen;
+        }
+        .add:hover{
+            background-color: darkgreen;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="navbar.js"></script>
 </head>
+
 <body>
-    <form action="add_blood.php" method="post">
-        <h1>Fill the above details</h1><br/>
-        <table>
-            <tr>
-                <td>Enter Blood Group</td>
-                <td><select name="bldgrp" required>
-                    <option>A positive</option>
-                    <option>A negative</option>
-                    <option>B positive </option>
-                    <option>B negative</option>
-                    <option>O positive</option>
-                    <option>O negative</option>
-                    <option>AB positive</option>
-                    <option>AB negative</option>
-                </select></td>
-            </tr>
-            <tr>
-                <td>Enter Quantity of Blood(in ml)</td>
-                <td><input type="number" name="quantity" required></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Add"></td>
-            </tr>
-        </table>
-        
+    <div id="nav-placeholder"></div>
+    <form class="container" action="add_blood.php" method="post">
+        <div class="content">
+            <h1>Fill the above details</h1><br />
+            <table>
+                <tr>
+                    <td>Enter Blood Group</td>
+                    <td><select name="bldgrp" required>
+                            <option>A positive</option>
+                            <option>A negative</option>
+                            <option>B positive </option>
+                            <option>B negative</option>
+                            <option>O positive</option>
+                            <option>O negative</option>
+                            <option>AB positive</option>
+                            <option>AB negative</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Enter Quantity of Blood(in ml)</td>
+                    <td><input type="number" name="quantity" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="add" type="submit" value="Add" style="margin-left: 50%;"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <form action="logout.php">
+        <button class="logout">Logout</button>
     </form>
 </body>
+
 </html>

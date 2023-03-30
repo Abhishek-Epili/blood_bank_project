@@ -16,6 +16,7 @@ if ($conn->connect_error) {
                     $sql = "INSERT INTO blood_requests ( requester, blood_type, blood_quantity, hospital) VALUES ( '$name', '" . $row["blood_grp"] . "', '$quantity', '" . $row["hospital"] . "');";
                     if ($conn->query($sql)) {
                         echo "<script>alert('Request added!');</script>";
+                        echo "<script>location.href = 'view_blood_sample.php?user=receiver';</script>";
                     }
                 }
             }

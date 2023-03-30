@@ -1,3 +1,4 @@
+
 <?php
 $conn = new mysqli("localhost", "root", "", "blood_bank", 3307);
 if ($conn->connect_error) {
@@ -12,7 +13,7 @@ if ($conn->connect_error) {
             $sql = "INSERT INTO blood_info ( blood_grp, quantity, hospital) VALUES ( '$bldgrp', '$quantity', '$hospital_name')";
             if ($conn->query($sql)) {
                 echo "<script>alert('Blood added successfully to your bank!');</script>";
-                echo "<script>location.href = 'add_blood.html';</script>";
+                echo "<script>location.href = 'hospital_control.php';</script>";
             } else {
                 echo "Error " . $conn->error;
             }

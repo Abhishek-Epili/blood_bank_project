@@ -16,7 +16,7 @@ if ($conn->connect_error) {
         $_SESSION["receiver_log"] = "yes";
         $_SESSION["receiver_name"] = $row["name"];
         $_SESSION["receiver_bldgrp"] = $row["blood_grp"];
-        echo "<script>location.href = 'receiver_control.html';</script>";
+        echo "<script>location.href = 'view_blood_sample.php?user=receiver';</script>";
       }
     } else {
       echo "<script>alert('Invalid Login Details!');</script>";
@@ -30,7 +30,7 @@ if ($conn->connect_error) {
       $row = $result->fetch_assoc();
       $_SESSION["hospital_log"] = "yes";
       $_SESSION["hospital_name"] = $row["name"];
-      echo "<script>location.href = 'hospital_control.html';</script>";
+      echo "<script>location.href = 'hospital_control.php';</script>";
     } else {
       echo "<script>alert('Invalid Login Details!');</script>";
       echo "<script>location.href = 'login.html';</script>";
