@@ -8,20 +8,16 @@
             margin: 0px;
         }
         table{
-            margin-left: 25%;
-            width: 600px;
-            height: 60px;
+            width: auto;
         }
         td{
             font-size: 20px;
             padding: 10px 40px;
         }
         .logout{
-            position:absolute;
-            top: 100px;
-            right:40px;
-            width: 120px;
-            height: 60px;
+            float: right;
+            width: 20vh;
+            height: 7vh;
             font-size: 17px;
             background-color: lightblue;
             border: none;
@@ -32,9 +28,8 @@
             color: white;
         }
         .btn{
-            margin-left: 150px;
-            width: 150px;
-            height: 40px;
+            width: 30%;
+            height: 10vh;
             font-size: 15px;
             background-color: lightblue;
             border: none;
@@ -55,7 +50,7 @@
     session_start();
     try {
         if ($_SESSION["receiver_log"] == "yes") {
-            $conn = new mysqli("localhost", "root", "", "blood_bank", 3307);
+            $conn = new mysqli("localhost", "id20534660_root", "Blood_bank_123", "id20534660_blood_bank");
             if ($conn->connect_error) {
                 die("Unable to Connect database: " . $conn->connect_error);
             } else {
@@ -67,7 +62,7 @@
                     $row = $result->fetch_assoc();
                 }
                 $quantity_str = $row["quantity"];
-                $quantity = str_replace("ml", "", $quantity_str);
+                $quantity = str_replace("ml", "Blood_bank_123", $quantity_str);
             }
         } else {
             echo "<script>alert('You are not logged in!');</script>";
@@ -78,6 +73,9 @@
         echo "<script>location.href = 'login.html';</script>";
     }
     ?>
+    <form action="logout.php" >
+        <button class="logout">Logout</button>
+    </form>
     <form action="add_request.php?id=<?php echo $id ?>" method="post">
         
             <br><br>
@@ -93,9 +91,7 @@
             </tr>
         </table>
     </form>
-    <form action="logout.php" >
-        <button class="logout">Logout</button>
-    </form>
+    <div id="footer-placeholder"></div>
 </body>
 
 </html>

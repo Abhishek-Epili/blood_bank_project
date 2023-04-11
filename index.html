@@ -8,19 +8,47 @@
     <script src="navbar.js"></script>
     <style>
         .btn1{
-            position: absolute;
-            top: 500px;
-            left: 150px;
             background-color: red;
             color: white;
-            width: 200px;
-            height: 50px;
-            font-size: 20px;
+            width: 30%;
+            height: 50%;
+            font-size: 1em;
             border: none;
+            border-radius: 20px;
         }
         .btn1:hover{
             background-color: darkred;
         }
+        .img{
+          height: 100%;
+        }
+        .btn-container{
+          width: 100%;
+          height: 20vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #footer-placeholder>div{
+          height: 45vh;
+        }
+        @media only screen and (min-width: 786px){
+          .btn-container{
+            position: absolute;
+            top: 75%;
+            left: 10%;
+            width: 15%;
+            height: 8%;
+        }
+        .btn1{
+          width: 100%;
+          height: 100%;
+        }
+        #footer-placeholder>div{
+          height: 12.5vh;
+        }
+        }
+        
     </style>
     <script>
         function redirect(){
@@ -41,15 +69,15 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="image1.jpg" alt="Los Angeles">
+            <img class="img" src="image1.jpg" alt="Los Angeles">
           </div>
       
           <div class="item">
-            <img src="image2.jpg" alt="Chicago">
+            <img class="img" src="image2.jpg" alt="Chicago">
           </div>
       
           <div class="item">
-            <img src="image3.jpg" alt="New York">
+            <img class="img" src="image3.jpg" alt="New York">
           </div>
         </div>
       
@@ -63,6 +91,9 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+      <div class="btn-container">
       <button class="btn1" onclick="redirect()">GET STARTED</button>
+    </div>
+      <div id="footer-placeholder"></div>
 </body>
 </html>

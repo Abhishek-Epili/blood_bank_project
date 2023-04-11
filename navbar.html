@@ -4,76 +4,72 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 <html>
-    <head>
-        <title>Navbar</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            nav{
-                width:100%;
-                height: 70px;
-                font-size: 18px;
-                display: flex;
-                justify-content: center;
-                font-family: "Verdana";
-            }
-            .home_hype{
-                background-color: #DB0F27;
-                color: white;
-                width: 25%;
-                text-decoration: none;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .name{
-                background-color: lightgoldenrodyellow;
-                color: black;
-                width: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 25px;
-            }
-            .home_hype:hover{
-                background-color: lightgray;
-                color: white;
-                text-decoration: none;
-            }
-            .contact{
-                background-color:gray;
-                color: white;
-                width: 50%;
-                
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 15px;
-                padding: 5px 5px;
-            }
-            .contact-bar{
-                position:absolute;
-                bottom: 0;
-                height:60px;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="contact-bar">
-            <div class="contact"><img src="location.jpg" alt="Location not found" height="40" style="border-radius: 50%;">&nbsp;J.N. Road, Mulund West, Mumbai-80</div>
-            <div class="contact"><img src="gmail.png" alt="Gmail not found" height="30">&nbsp;bloodbank@gmail.com</div>
-            <div class="contact"><img src="whatsapp.png" alt="Whatsapp not found" height="40" style="border-radius: 50%">&nbsp;+91 1234567890</div>
-            <div class="contact"><img src="fb.jpg" alt="FB not found" height="30" style="border-radius: 50%">&nbsp;blood bank</div>
-            <div class="contact"><img src="insta.jpg" alt="Insta not found" height="30">&nbsp;@blood_bank</div>
-        </nav>
-        <nav>
-            <div class='name'>Blood Bank</div>
-            <a class="home_hype" href="index.html">Home</a>       
-            <a class="home_hype" href="view_blood_sample.php?user=view">View Blood Samples</a>  
-            <a class="home_hype" href="about.html" >About Us</a>    
-            <a class="home_hype" href="feedback.php" >Feedback</a>
-            <a class="home_hype" href="login.html" ><img src="profile.png" alt="nothing" style="height:50px; border-radius: 50%"/>&nbsp;&nbsp;Sign Up</a> 
-        </nav>
-    </body>
+
+<head>
+    <title>Navbar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        nav {
+            width: 100%;
+            height: 12.5vh;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: center;
+            font-family: "Verdana";
+        }
+        nav>div{
+            padding: 1vh 0vh;
+        }
+
+        .home_hype {
+            background-color: #DB0F27;
+            color: white;
+            width: 25%;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name {
+            display: none;
+        }
+
+        .home_hype:hover {
+            background-color: lightgray;
+            color: white;
+            text-decoration: none;
+        }
+
+        
+        @media only screen and (min-width: 768px) {
+            .name {
+            background-color: lightgoldenrodyellow;
+            color: black;
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    
+    </div>
+    <nav>
+        <div class='name'>Blood Bank</div>
+        <a class="home_hype" href="index.html">Home</a>
+        <a class="home_hype" href="view_blood_sample.php?user=view">View Blood Samples</a>
+        <a class="home_hype" href="about.html">About Us</a>
+        <a class="home_hype" href="feedback.php">Feedback</a>
+        <a class="home_hype" href="login.html"><img src="profile.png" alt="nothing"
+                style="height:40%; border-radius: 50%" />&nbsp;Sign Up</a>
+    </nav>
+</body>
+
 </html>

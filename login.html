@@ -9,79 +9,52 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="navbar.js"></script>
-    <style>
-        body {
-            margin: 0px;
-        }
-
-        .login {
-            margin: 50px 35%;
-            border: 1px solid black;
-            color: black;
-            height: 350px;
-            width: 450px;
-            padding: 40px 20px;
-            border-radius: 20px;
-            font-family: 'Verdana';
-        }
-
-        .content {
-            position: relative;
-            left: 60px;
-        }
-
-        tr,td {
-            padding: 10px 10px;
-            font-size: 15px;
-        }
-
-        .btn {
-            margin-left: 100px;
-            width: 80px;
-            height: 40px;
-            background-color: lightgreen;
-            border: none;
-            border-radius: 15px;
-            font-size: 15px;
-        }
-
-        .btn:hover {
-            background-color: darkgreen;
-        }
-    </style>
+    <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
     <div id="nav-placeholder"></div>
-
-    <form class="login" action="check_login.php" method="post">
-        <div class="content">
-            <h1 style="top: 30px; margin-left: 90px;">Login Page</h1><br>
-            <table>
-                <tr>
-                    <td>Email ID</td>
-                    <td><input type="email" name="user" required></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="pass" required></td>
-                </tr>
-                <tr>
-                    <td>You are a </td>
-                    <td><input type="radio" name="login_type" value="Receiver" required>&nbsp;Receiver
+    <center>
+        <div class="container">
+            <center>
+                <h1>Login Page</h1>
+            </center>
+            <form class="login" action="check_login.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label >Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="user" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label >Password</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" name="pass" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label >Login As</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" name="login_type" value="Receiver" required>&nbsp;Receiver
                         &nbsp;&nbsp;<input type="radio" name="login_type" value="Hospital" required>&nbsp;Hospital</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="btn">Login</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><a style="margin-left: 20px;" href="receiver_register.html">New here? Register to
-                            continue!!</a></td>
-                </tr>
-            </table>
-
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <a href="receiver_register.html">New User? Sign up!!</a>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
         </div>
-    </form>
+    </center>
+    <div id="footer-placeholder" style="margin-top: 12vh;"></div>
 </body>
 
 </html>

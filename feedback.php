@@ -25,10 +25,11 @@ try {
     <style>
         .feedback{
                 margin: 30px 20%;
-                border: 1px solid black;
-                width: 800px;
-                height: 450px;
-                border-radius: 25%;
+                border: 1px solid white;
+                width:60%;
+                height: 40%;
+                border-radius: 20px;
+                box-shadow: 3px 3px 5px 2px black;
             }
             body{
                 margin: 0px;
@@ -36,12 +37,11 @@ try {
             }
             table{
                 text-align: center;
-                width: 500px;
-                margin-left: 150px;
+                width: auto;
             }
             input[type="submit"]{
-                height:50px;
-                width: 100px;
+                height:10vh;
+                width: 15vh;
                 background-color: lightgreen;
                 border-radius: 25%;
                 font-size: 15px;
@@ -51,11 +51,9 @@ try {
                 padding: 7px 10px;
             }
             .logout{
-            position:absolute;
-            top: 100px;
-            right:40px;
-            width: 120px;
-            height: 60px;
+           float: right;
+            width: 20vh;
+            height: 7vh;
             font-size: 17px;
             background-color: lightblue;
             border: none;
@@ -65,12 +63,21 @@ try {
             background-color: darkblue;
             color: white;
         }
+        @media only screen and (max-width: 786px){
+            .feedback{
+                width: 100%;
+                margin: 10vh 0vh;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="nav-placeholder"></div>
+    <form action="logout.php" >
+        <button class="logout">Logout</button>
+    </form>
     <form class="feedback" action="insert_feedback.php" method="post">
-        <h1><center>Feedback Form</center></h1>
+    <center><h1>Feedback Form</h1>
         <table >
             <tr>
                 <td colspan="3" style="font-weight: bold">How would you rate our services.</td>
@@ -98,9 +105,8 @@ try {
         <td colspan="3"><input type="submit" value="Submit"></td>
             </tr>
         </table>
+        </center>
     </form>
-    <form action="logout.php" >
-        <button class="logout">Logout</button>
-    </form>
+    <div id="footer-placeholder"></div>
 </body>
 </html>

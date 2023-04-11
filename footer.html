@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contact { 
+            color: white;
+            text-align: center;
+            width: 100%;
+            font-size: 1em;
+            padding: 5px 5px;
+        }
+        .contact-bar {
+            background-color: gray;
+            display: grid;
+            grid-template-columns: auto auto;
+            height: 30vh;
+            width: 100%;
+        }
+        @media only screen and (min-width: 768px) {
+            .contact-bar {
+                height: 12.5vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-bar>div {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                font-size: 1em;
+                padding: 5px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-bar">
+        <div>
+            <div class="contact"><img src="location.jpg" alt="Location not found" height="40"
+                    style="border-radius: 50%;">&nbsp;J.N. Road, Mulund West, Mumbai-80</div>
+        </div>
+        <div>
+            <div class="contact"><img src="gmail.png" alt="Gmail not found" height="30">&nbsp;bloodbank@gmail.com</div>
+        </div>
+        <div>
+            <div class="contact"><img src="whatsapp.png" alt="Whatsapp not found" height="40"
+                    style="border-radius: 50%">&nbsp;+91 1234567890</div>
+        </div>
+        <div>
+            <div class="contact"><img src="fb.jpg" alt="FB not found" height="30" style="border-radius: 50%">&nbsp;blood
+                bank</div>
+        </div>
+        <div className="insta">
+            <div class="contact"><img src="insta.jpg" alt="Insta not found" height="30">&nbsp;@blood_bank</div>
+        </div>
+</body>
+</html>

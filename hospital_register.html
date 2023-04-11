@@ -8,91 +8,79 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="navbar.js"></script>
-    <style>
-        body {
-            margin: 0px;
-        }
-
-        .register {
-            margin: 20px 28%;
-            border: 1px solid black;
-            color: black;
-            height: 480px;
-            width: 620px;
-            border-radius: 20px;
-            font-family: 'Verdana';
-        }
-
-        .content {
-            position: relative;
-            left: 100px;
-        }
-
-        tr,td {
-            font-size: 15px;
-            padding: 8px 15px;
-        }
-
-        .btn {
-            margin-left: 100px;
-            width: 120px;
-            height: 40px;
-            background-color: lightgreen;
-            border: none;
-            border-radius: 15px;
-            font-size: 15px;
-        }
-
-        .btn:hover {
-            background-color: darkgreen;
-        }
-    </style>
+    <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
     <div id="nav-placeholder"></div>
-    <form class="register" action="hospital_register.php" method="post">
-        <div class="content">
-            <h1>Hospital Registration Page</h1>
-
-            <table>
-                <tr>
-                    <td>Hospital Name</td>
-                    <td><input type="text" name="name" required></td>
-                </tr>
-                <tr>
-                    <td>Contact</td>
-                    <td><input type="tel" name="contact" pattern="[0-9]{10}" required
-                            title="Contact number should be contain exact 10 digits"></td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="email" name="email" required></td>
-                </tr>
-                <tr>
-                    <td>Address</td>
-                    <td><textarea name="address" required></textarea></td>
-                </tr>
-                <tr>
-                    <td>Create Password</td>
-                    <td><input type="password" name="pass1" required></td>
-                </tr>
-                <tr>
-                    <td>Re-enter Password</td>
-                    <td><input type="password" name="pass2" required></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="btn">Create Account</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><a href="receiver_register.html" style="margin-left: 40px;">Not a Hospital? Register as Receiver</a></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><a href="login.html" style="margin-left: 100px;">Go to Login Page</a></td>
-                </tr>
-            </table>
+    <center>
+        <div class="container">
+            <center>
+                <h1>Hospital Registration Page</h1>
+            </center>
+            <form class="login" action="hospital_register.php" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label>Hospital Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Contact</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="tel" name="contact" pattern="[0-9]{10}" required title="Contact number should be contain exact 10 digits">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Address</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea name="address" required></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Create Password</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" name="pass1" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Re-Enter Password</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="password" name="pass2" required>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <input type="submit" value="Create Account">
+                </div>
+                
+                <div class="row" style="text-align: center;">
+                    <a href="receiver_register.html">Not a Hospital? Sign up as Visitor!!</a>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <a href="login.html">Go to Login Page</a>
+                </div>
+            </form>
         </div>
-    </form>
+    </center>
+    <div id="footer-placeholder"></div>
 </body>
 
 </html>

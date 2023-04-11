@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +15,9 @@
             margin:0px;
         }
         .logout{
-            position:absolute;
-            top: 100px;
-            right:40px;
-            width: 120px;
-            height: 60px;
+            float: right;
+            width: 20vh;
+            height: 7vh;
             font-size: 17px;
             background-color: lightblue;
             border: none;
@@ -27,7 +28,9 @@
             color: white;
         }
         .content{
-            margin: 50px 25%;
+            display: grid;
+            grid-template-columns: auto;
+            margin: 5% 5%;
         }
         table,th,td{
             border: 1px solid black;
@@ -36,15 +39,20 @@
             font-size: 20px;
         }
         table{
-            width: 600px;
-            height: 60px;
+            width: auto;
         }
     </style>
 </head>
 <body>
 <div id="nav-placeholder"></div>
 <?php
-$conn = new mysqli("localhost", "root", "", "blood_bank", 3307);
+if($_GET["user"] == "receiver"){
+    echo "</div>
+    <form action='logout.php' >
+        <button class='logout'>Logout</button>
+    </form>";
+    }
+$conn = new mysqli("localhost", "id20534660_root", "Blood_bank_123", "id20534660_blood_bank");
 if ($conn->connect_error) {
     die("Unable to Connect database: " . $conn->connect_error);
 } else {
@@ -90,16 +98,11 @@ if ($conn->connect_error) {
 }
 ?>
 <div class="content">
-    <h1 style="width: 600px; text-align: center">Details of blood samples available in particular hospitals are as follows</h1><br><br>
+    <h1 style="width: 100%; text-align: center">Details of blood samples available in particular hospitals are as follows</h1><br><br>
     <?php
     echo $table;
     echo "</div";
-    if($_GET["user"] == "view"){
-    echo "</div>
-    <form action='logout.php' >
-        <button class='logout'>Logout</button>
-    </form>";
-    }
+    
     ?>
     
 

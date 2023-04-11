@@ -1,5 +1,5 @@
 <?php 
-$conn = new mysqli("localhost","root","","blood_bank",3307);
+$conn = new mysqli("localhost","id20534660_root","Blood_bank_123","id20534660_blood_bank",3307);
 if ($conn->connect_error) { 
     die("Unable to Connect database: " . $conn->connect_error);
 }

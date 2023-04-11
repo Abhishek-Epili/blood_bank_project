@@ -12,11 +12,9 @@
         }
 
         .logout {
-            position: absolute;
-            top: 100px;
-            right: 40px;
-            width: 120px;
-            height: 60px;
+            float: right;
+            width: 20vh;
+            height: 7vh;
             font-size: 17px;
             background-color: lightblue;
             border: none;
@@ -32,15 +30,10 @@
             margin: 20px 28%;
             border: 1px solid black;
             color: black;
-            height: 480px;
-            width: 600px;
+            height: 68.5vh;
+            width: 50%;
             border-radius: 20px;
             font-family: 'Verdana';
-        }
-
-        .content {
-            position: relative;
-            left: 50px;
         }
         select{
             width: 180px;
@@ -62,6 +55,12 @@
             background-color: darkgreen;
             color: white;
         }
+        @media only screen and (max-width:786px){
+            .container{
+                margin: 10vh 0vh;
+                width: 100%;
+            }
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="navbar.js"></script>
@@ -69,8 +68,11 @@
 
 <body>
     <div id="nav-placeholder"></div>
+    <form action="logout.php">
+        <button class="logout">Logout</button>
+    </form>
     <form class="container" action="add_blood.php" method="post">
-        <div class="content">
+        <div class="content" style="text-align: center;">
             <h1>Fill the above details</h1><br />
             <table>
                 <tr>
@@ -96,9 +98,8 @@
             </table>
         </div>
     </form>
-    <form action="logout.php">
-        <button class="logout">Logout</button>
-    </form>
+    
+    <div id="footer-placeholder" ></div>
 </body>
 
 </html>

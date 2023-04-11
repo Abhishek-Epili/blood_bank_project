@@ -27,11 +27,9 @@ try {
         }
 
         .logout {
-            position: absolute;
-            top: 100px;
-            right: 40px;
-            width: 120px;
-            height: 60px;
+            float: right;
+            width: 20vh;
+            height: 7vh;
             font-size: 17px;
             background-color: lightblue;
             border: none;
@@ -44,7 +42,7 @@ try {
         }
 
         .content {
-            margin: 50px 30%;
+            margin: 5% 30%;
         }
 
         table,
@@ -57,16 +55,24 @@ try {
         }
 
         table {
-            width: 500px;
-            height: 50px;
+            width: auto;
+        }
+        @media only screen and (max-width: 786px){
+            .content{
+                width: 100%;
+                margin: 10vh 0vh;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="nav-placeholder"></div>
+    <form action="logout.php">
+        <button class="logout">Logout</button>
+    </form>
     <?php
-    $conn = new mysqli("localhost", "root", "", "blood_bank", 3307);
+    $conn = new mysqli("localhost", "id20534660_root", "Blood_bank_123", "id20534660_blood_bank");
     if ($conn->connect_error) {
         die("Unable to Connect database: " . $conn->connect_error);
     } else {
@@ -86,15 +92,14 @@ try {
     }
     ?>
     <div class="content">
+        <center>
         <h1 style="width: 500px; text-align: center">Details of people requested for blood are as follows</h1><br><br>
         <?php
         echo $table;
         ?>
+        </center>
     </div>
-    <form action="logout.php">
-        <button class="logout">Logout</button>
-    </form>
-
+    <div id="footer-placeholder" style="margin-top: 32.5vh"></div>
 </body>
 
 </html>
